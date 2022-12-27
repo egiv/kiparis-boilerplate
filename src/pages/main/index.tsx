@@ -16,7 +16,10 @@ const Main: FC = () => {
                 Перед использованеим, ознакомьтесь с README-md файлом.
             </p>
             <img alt="t.me/egoriv" src={photo} />
-            <span>Поддержите подпиской на мой (<a href="https://t.me/egoriv">telegram</a>-канал.)</span>
+            <span>
+                Поддержите подпиской на мой (
+                <a href="https://t.me/egoriv">telegram</a>-канал.)
+            </span>
         </div>
     );
 };

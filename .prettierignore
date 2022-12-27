@@ -2,6 +2,7 @@
 build
 dist
 coverage
+README.md
 
 # Ignore all HTML files:
 *.html
