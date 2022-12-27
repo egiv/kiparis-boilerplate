@@ -10,7 +10,7 @@ const Main: FC = () => {
         <div className={styles.container}>
             <Hello className={styles.svg} />
             <p className={styles.greeting}>
-                Кепарисс-бойлерплейт для реакта от Егора.
+                Бойлерплейт для реакта от Егора Иванова.
             </p>
             <p className={styles.greeting}>
                 Перед использованеим, ознакомьтесь с README-md файлом.
