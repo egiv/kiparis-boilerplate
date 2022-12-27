@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "lib": ["dom", "dom.iterable", "es6"],
+        "target": "ES5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react",
+        "paths": {
+            "assets/*": ["./src/assets/*"],
+            "api/*": ["./src/api/*"],
+            "components/*": ["./src/components/*"],
+            "pages/*": ["./src/pages/*"],
+            "providers/*": ["./src/providers/*"],
+            "public/*": ["./src/public/*"],
+            "routes/*": ["./src/routes/*"],
+            "store/*": ["./src/store/*"],
+            "utils/*": ["./src/utils/*"],
+            "styles/*": ["./src/styles/*"]
+        }
+    },
+    "include": ["."]
+}

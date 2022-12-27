@@ -1,0 +1,15 @@
+.svg {
+    width: 500px;
+    height: 500px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.greeting {
+    margin: 10px;
+}
