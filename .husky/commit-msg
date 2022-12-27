@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+message="$(cat $1)"
+requiredPattern="(feat|cut|fix|bump|make|start|stop|refactor|reformat|optimise|document|merge)([0-9]+): .*$"
+
+if ! [[ $message =~ $requiredPattern ]];
+then
+  echo "Ошибка в формате коммита"
+  echo "_________"
+  echo "сообщение должно содержать:"
+  echo "<префикс пространства> <номер задачи> <глагол>: <что было сделано>"
+  echo "_________"
+  echo "допустимые глаголы: feat|cut|fix|bump|make|start|stop|refactor|reformat|optimise|document|merge"
+  echo "пример кода пространства: #1 (номер таски или issues)"
+  echo "_________"
+  echo "пример правильного коммита:"
+  echo "feat: add build packages"
+  echo "_________"
+  echo "текущее сообщение:"
+  echo $message
+  echo "для подробностей, открыть файл .husky/commit-msg"
+  echo "_________"
+  exit 1
+fi
+
+npm run lint-staged

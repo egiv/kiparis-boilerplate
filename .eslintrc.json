@@ -1,0 +1,81 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint", "react-hooks", "simple-import-sort"],
+    "extends": [
+        "plugin:react/recommended",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+        "react/jsx-equals-spacing": 2,
+        "react/jsx-key": 2,
+        "react/jsx-no-comment-textnodes": 2,
+        "react/jsx-no-duplicate-props": 2,
+        "react/jsx-no-undef": 2,
+        "react/jsx-pascal-case": 2,
+        "react/jsx-uses-react": 2,
+        "react/jsx-uses-vars": 2,
+        "react/require-render-return": 2,
+        "react/self-closing-comp": 2,
+        "react/prop-types": 0,
+        "react/react-in-jsx-scope": 0,
+        "@typescript-eslint/no-var-requires": 0,
+        "@typescript-eslint/explicit-module-boundary-types": 0,
+        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/no-unused-vars": "error",
+        "no-useless-catch": 0,
+        "react-hooks/exhaustive-deps": 2,
+        "simple-import-sort/imports": [
+            "error",
+            {
+                "groups": [
+                    // Side effect imports.
+                    ["^\\u0000"],
+                    // Packages.
+                    // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
+                    ["^@?\\w"],
+                    // Absolute imports and other imports such as Vue-style `@/foo`.
+                    // Anything not matched in another group.
+                    ["^"],
+                    [
+                        "^api",
+                        "^components",
+                        "^constants",
+                        "^hooks",
+                        "^pages",
+                        "^providers",
+                        "^routes",
+                        "^store",
+                        "^utils"
+                    ],
+                    ["^assets", "^styles"],
+                    // Relative imports.
+                    // Anything that starts with a dot.
+                    ["^\\."]
+                ]
+            }
+        ],
+        "indent": ["error", 4],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "@typescript-eslint/ban-types": [
+            "error",
+            {
+                "types": {
+                    "Object": false
+                }
+            }
+        ]
+    },
+    "settings": {
+        "react": {
+            "pragma": "React",
+            "version": "detect"
+        }
+    }
+}
